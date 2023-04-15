@@ -13,7 +13,7 @@ export default function Accordion() {
       </div>
       <div id="accordion-collapse-body-1" className="hidden" aria-labelledby="accordion-collapse-heading-1">
         <div className="p-5 border border-gray-200">
-          <p className="mb-2 text-gray-500"><code>data-accordion="collapse"</code></p>
+          <p className="mb-2 text-gray-500"><code>data-accordion=&quot;collapse&quot;</code></p>
         </div>
       </div>
       <h2 id="accordion-collapse-heading-2">
@@ -24,7 +24,7 @@ export default function Accordion() {
       </h2>
       <div id="accordion-collapse-body-2" className="hidden" aria-labelledby="accordion-collapse-heading-2">
         <div className="p-5 border border-b-0 border-gray-200">
-          <p className="mb-2 text-gray-500"><code>data-accordion="open"</code></p>
+          <p className="mb-2 text-gray-500"><code>data-accordion=&quot;open&quot;</code></p>
         </div>
       </div>
       <h2 id="accordion-collapse-heading-3">
