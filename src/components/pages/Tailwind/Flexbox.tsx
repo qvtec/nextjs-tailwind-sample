@@ -201,7 +201,7 @@ export default function Flexbox() {
           <p className="font-bold">flex-1</p>
           <p className="text-sm">初期サイズを無視して、必要に応じてフレックスアイテムを拡大および縮小できるようにする</p>
           <div className="mt-2 flex gap-4 text-sm font-bold bg-gray-200 p-3">
-            <div className="flex-none w-14 h-8 rounded-lg flex items-center justify-center bg-pink-300 dark:bg-pink-800 dark:text-pink-400">01</div>
+            <div className="flex-none w-14 h-8 rounded-lg flex items-center justify-center bg-pink-300">01</div>
             <div className="flex-1 w-64 rounded-lg flex items-center justify-center bg-pink-500 shadow-lg">02</div>
             <div className="flex-1 w-32 rounded-lg flex items-center justify-center bg-pink-500 shadow-lg">03</div>
           </div>
@@ -210,7 +210,7 @@ export default function Flexbox() {
           <p className="font-bold">flex-auto</p>
           <p className="text-sm">初期サイズを考慮して、フレックスアイテムを拡大および縮小できるようにする</p>
           <div className="mt-2 flex gap-4 text-sm font-bold bg-gray-200 p-3">
-            <div className="flex-none w-14 h-8 rounded-lg flex items-center justify-center bg-violet-300 dark:bg-violet-800 dark:text-violet-400">01</div>
+            <div className="flex-none w-14 h-8 rounded-lg flex items-center justify-center bg-violet-300">01</div>
             <div className="flex-auto w-64 rounded-lg flex items-center justify-center bg-violet-500 shadow-lg">02</div>
             <div className="flex-auto w-32 rounded-lg flex items-center justify-center bg-violet-500 shadow-lg">03</div>
           </div>
@@ -220,13 +220,13 @@ export default function Flexbox() {
           <p className="text-sm">フレックスアイテムが拡大または縮小するのを防ぐ</p>
           <div className="flex gap-4 text-sm font-bold bg-gray-200 p-3">
             <div className="flex-none">
-              <div className="p-2 w-14 h-8 rounded-lg flex items-center justify-center bg-indigo-300 dark:bg-indigo-800 dark:text-indigo-400">01</div>
+              <div className="p-2 w-14 h-8 rounded-lg flex items-center justify-center bg-indigo-300">01</div>
             </div>
             <div className="flex-none">
               <div className="p-2 w-72 rounded-lg flex items-center justify-center bg-indigo-500 shadow-lg">02</div>
             </div>
             <div className="flex-1">
-              <div className="p-2 rounded-lg flex items-center justify-center bg-indigo-300 dark:bg-indigo-800 dark:text-indigo-400">03</div>
+              <div className="p-2 rounded-lg flex items-center justify-center bg-indigo-300">03</div>
             </div>
           </div>
         </div>
