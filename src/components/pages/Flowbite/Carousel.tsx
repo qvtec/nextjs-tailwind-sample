@@ -8,15 +8,15 @@ function useCarousel() {
     const items: CarouselItem[] = [
       {
         position: 0,
-        el: document.getElementById("carousel-item-1"),
+        el: document.getElementById("carousel-item-1")!,
       },
       {
         position: 1,
-        el: document.getElementById("carousel-item-2"),
+        el: document.getElementById("carousel-item-2")!,
       },
       {
         position: 2,
-        el: document.getElementById("carousel-item-3"),
+        el: document.getElementById("carousel-item-3")!,
       },
     ]
 
@@ -30,15 +30,15 @@ function useCarousel() {
         items: [
           {
             position: 0,
-            el: document.getElementById("carousel-indicator-1"),
+            el: document.getElementById("carousel-indicator-1")!,
           },
           {
             position: 1,
-            el: document.getElementById("carousel-indicator-2"),
+            el: document.getElementById("carousel-indicator-2")!,
           },
           {
             position: 2,
-            el: document.getElementById("carousel-indicator-3"),
+            el: document.getElementById("carousel-indicator-3")!,
           },
         ],
       },
@@ -60,8 +60,8 @@ function useCarousel() {
     carousel.cycle()
 
     // set event listeners for prev and next buttons
-    const $prevButton = document.getElementById("data-carousel-prev")
-    const $nextButton = document.getElementById("data-carousel-next")
+    const $prevButton = document.getElementById("data-carousel-prev")!
+    const $nextButton = document.getElementById("data-carousel-next")!
 
     $prevButton.addEventListener("click", () => {
       carousel.prev()
