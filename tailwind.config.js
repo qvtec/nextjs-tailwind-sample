@@ -8,14 +8,17 @@ module.exports = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      colors: {
+        primary: {
+          light: '#59d3d4',
+          DEFAULT: '#06bbbc',
+          dark: '#008c8d',
+        },
       },
     },
   },
   plugins: [
+    require('prettier-plugin-tailwindcss'),
     require('flowbite/plugin')
   ],
 }

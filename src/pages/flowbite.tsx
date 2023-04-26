@@ -7,45 +7,45 @@ export default function Flowbite() {
     <div className="p-4">
       <h1 className="text-xl font-bold">Flowbite</h1>
       <div className="mt-3 grid grid-cols-3 gap-2">
-        <div className="block p-6 border border-gray-300 rounded">
+        <div className="block rounded border border-gray-300 p-6">
           <Accordion />
         </div>
-        <div className="block p-6 border border-gray-300 rounded">
+        <div className="block rounded border border-gray-300 p-6">
           <Alerts />
         </div>
-        <div className="block p-6 border border-gray-300 rounded">
+        <div className="block rounded border border-gray-300 p-6">
           <Carousel />
         </div>
-        <div className="flex items-center justify-center rounded bg-gray-50 h-28">
-            <p className="text-2xl text-gray-400">+</p>
+        <div className="flex h-28 items-center justify-center rounded bg-gray-50">
+          <p className="text-2xl text-gray-400">+</p>
         </div>
       </div>
-      <div className="grid grid-cols-3 gap-4 mb-4">
-        <div className="flex items-center justify-center h-24 rounded bg-gray-50">
-            <p className="text-2xl text-gray-400">+</p>
+      <div className="mb-4 grid grid-cols-3 gap-4">
+        <div className="flex h-24 items-center justify-center rounded bg-gray-50">
+          <p className="text-2xl text-gray-400">+</p>
         </div>
-        <div className="flex items-center justify-center h-24 rounded bg-gray-50">
-            <p className="text-2xl text-gray-400">+</p>
+        <div className="flex h-24 items-center justify-center rounded bg-gray-50">
+          <p className="text-2xl text-gray-400">+</p>
         </div>
-        <div className="flex items-center justify-center h-24 rounded bg-gray-50">
-            <p className="text-2xl text-gray-400">+</p>
+        <div className="flex h-24 items-center justify-center rounded bg-gray-50">
+          <p className="text-2xl text-gray-400">+</p>
         </div>
       </div>
-      <div className="flex items-center justify-center h-48 mb-4 rounded bg-gray-50">
+      <div className="mb-4 flex h-48 items-center justify-center rounded bg-gray-50">
         <p className="text-2xl text-gray-400">+</p>
       </div>
-      <div className="grid grid-cols-2 gap-4 mb-4">
-        <div className="flex items-center justify-center rounded bg-gray-50 h-28">
-            <p className="text-2xl text-gray-400">+</p>
+      <div className="mb-4 grid grid-cols-2 gap-4">
+        <div className="flex h-28 items-center justify-center rounded bg-gray-50">
+          <p className="text-2xl text-gray-400">+</p>
         </div>
-        <div className="flex items-center justify-center rounded bg-gray-50 h-28">
-            <p className="text-2xl text-gray-400">+</p>
+        <div className="flex h-28 items-center justify-center rounded bg-gray-50">
+          <p className="text-2xl text-gray-400">+</p>
         </div>
-        <div className="flex items-center justify-center rounded bg-gray-50 h-28">
-            <p className="text-2xl text-gray-400">+</p>
+        <div className="flex h-28 items-center justify-center rounded bg-gray-50">
+          <p className="text-2xl text-gray-400">+</p>
         </div>
-        <div className="flex items-center justify-center rounded bg-gray-50 h-28">
-            <p className="text-2xl text-gray-400">+</p>
+        <div className="flex h-28 items-center justify-center rounded bg-gray-50">
+          <p className="text-2xl text-gray-400">+</p>
         </div>
       </div>
     </div>

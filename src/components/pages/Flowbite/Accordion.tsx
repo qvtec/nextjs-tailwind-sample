@@ -1,44 +1,83 @@
+import { Accordion } from 'flowbite'
+import type { AccordionOptions, AccordionItem, AccordionInterface } from "flowbite"
+import { useEffect } from "react"
 
-export default function Accordion() {
+function useAccordion() {
+  useEffect(()=>{
+    const accordionItems: AccordionItem[] = [
+      {
+          id: 'accordion-example-heading-1',
+          triggerEl: document.querySelector('#accordion-example-heading-1'),
+          targetEl: document.querySelector('#accordion-example-body-1'),
+          active: false
+      },
+      {
+          id: 'accordion-example-heading-2',
+          triggerEl: document.querySelector('#accordion-example-heading-2'),
+          targetEl: document.querySelector('#accordion-example-body-2'),
+          active: false
+      },
+      {
+          id: 'accordion-example-heading-3',
+          triggerEl: document.querySelector('#accordion-example-heading-3'),
+          targetEl: document.querySelector('#accordion-example-body-3'),
+          active: false
+      }
+    ];
+
+    const options: AccordionOptions = {
+      alwaysOpen: true,
+      activeClasses: 'bg-gray-100 text-gray-900',
+      inactiveClasses: 'text-gray-500',
+    };
+
+    const accordion: AccordionInterface = new Accordion(accordionItems, options);
+
+    accordion.open('accordion-example-heading-1');
+  },[])
+}
+
+
+
+export default function FlowbiteAccordion() {
+  useAccordion()
+
   return (
     <>
     <h5 className="text-lg font-bold tracking-tight text-gray-900">Accordion</h5>
     <p className="text-gray-700 mb-2">子要素の折りたたみと展開</p>
-    <div id="accordion-collapse" data-accordion="collapse" className="w-full">
-      <div id="accordion-collapse-heading-1">
-        <button type="button" className="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-gray-200 focus:ring-4 focus:ring-gray-200 hover:bg-gray-100" data-accordion-target="#accordion-collapse-body-1" aria-expanded="true" aria-controls="accordion-collapse-body-1">
-          <span>Default accordion</span>
-          <svg data-accordion-icon className="w-6 h-6 rotate-180 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd"></path></svg>
-        </button>
-      </div>
-      <div id="accordion-collapse-body-1" className="hidden" aria-labelledby="accordion-collapse-heading-1">
-        <div className="p-5 border border-gray-200">
-          <p className="mb-2 text-gray-500"><code>data-accordion=&quot;collapse&quot;</code></p>
-        </div>
-      </div>
-      <h2 id="accordion-collapse-heading-2">
-        <button type="button" className="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-b-0 border-gray-200 focus:ring-4 focus:ring-gray-200 hover:bg-gray-100" data-accordion-target="#accordion-collapse-body-2" aria-expanded="false" aria-controls="accordion-collapse-body-2">
-          <span>Always open</span>
+    <div id="accordion-arrow-icon" data-accordion="open">
+      <h2 id="accordion-example-heading-1">
+        <button type="button" className="flex items-center justify-between w-full p-5 font-medium text-left border border-b-0 border-gray-200 hover:bg-gray-100" data-accordion-target="#accordion-example-body-1">
+          <span>Accordion1</span>
           <svg data-accordion-icon className="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd"></path></svg>
         </button>
       </h2>
-      <div id="accordion-collapse-body-2" className="hidden" aria-labelledby="accordion-collapse-heading-2">
+      <div id="accordion-example-body-1" className="hidden">
         <div className="p-5 border border-b-0 border-gray-200">
-          <p className="mb-2 text-gray-500"><code>data-accordion=&quot;open&quot;</code></p>
+          <p className="text-gray-500">内容1</p>
         </div>
       </div>
-      <h2 id="accordion-collapse-heading-3">
-        <button type="button" className="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-gray-200 focus:ring-4 focus:ring-gray-200 hover:bg-gray-100" data-accordion-target="#accordion-collapse-body-3" aria-expanded="false" aria-controls="accordion-collapse-body-3">
-          <span>Color options</span>
+      <h2 id="accordion-example-heading-2">
+        <button type="button" className="flex items-center justify-between w-full p-5 font-medium text-left border border-b-0 border-gray-200 hover:bg-gray-100" data-accordion-target="#accordion-example-body-2">
+          <span>Accordion2</span>
           <svg data-accordion-icon className="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd"></path></svg>
         </button>
       </h2>
-      <div id="accordion-collapse-body-3" className="hidden" aria-labelledby="accordion-collapse-heading-3">
+      <div id="accordion-example-body-2" className="hidden">
+        <div className="p-5 border border-b-0 border-gray-200">
+          <p className="text-gray-500">内容2</p>
+        </div>
+      </div>
+      <h2 id="accordion-example-heading-3">
+        <button type="button" className="flex items-center justify-between w-full p-5 font-medium text-left border border-gray-200 hover:bg-gray-100" data-accordion-target="#accordion-example-body-3">
+          <span>Accordion3</span>
+          <svg data-accordion-icon className="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd"></path></svg>
+        </button>
+      </h2>
+      <div id="accordion-example-body-3" className="hidden">
         <div className="p-5 border border-t-0 border-gray-200">
-          <ul className="pl-5 text-gray-500 list-disc">
-            <li>data-active-classes</li>
-            <li>data-inactive-classes</li>
-          </ul>
+          <p className="text-gray-500">内容3</p>
         </div>
       </div>
     </div>
